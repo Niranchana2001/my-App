@@ -1,6 +1,4 @@
-<p>Hello World</p>
-<p> Testing 2</p>
-<p>Card Count : {{cardCount}}</p>
+<p>Cart Count : {{cardCount}}</p>
 
-<button (click)="addCart()">Add Cart</button> &nbsp;&nbsp;
-<button (click)="removeCart()">Remove Cart</button>
+<button (click)="addCart(cartCount)" [disabled]="disableAdd" >Add Cart</button> &nbsp;&nbsp;
+<button (click)="removeCart(cartCount)" [disabled]="disableRemove">Remove Cart</button>

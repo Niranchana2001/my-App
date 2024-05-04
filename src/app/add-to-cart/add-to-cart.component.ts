@@ -6,15 +6,34 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent {
+  
+  cartCount = 0
+  disableAdd : boolean = false;
+  disableRemove : boolean = true;
 
-  cardCount = 0
+  addCart(cartvalue : number){
 
-  addCart(){
-    this.cardCount ++
+    if(cartvalue < 5){
+      
+      this.cartCount ++
+      this.disableRemove = false;
+
+    }else{
+      this.disableAdd = true;
+    }
+    
   }
 
-  removeCart(){
-    this.cardCount --
+  removeCart(cartvalue : number){
+    
+    if(cartvalue > 0){
+      this.cartCount --
+      this.disableAdd = false;
+    }else{
+      this.disableRemove = true;
+    }
+    
   }
+
 
 }
