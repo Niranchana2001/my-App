@@ -8,32 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class AddToCartComponent {
   
   cartCount = 0
-  disableAdd : boolean = false;
-  disableRemove : boolean = true;
 
-  addCart(cartvalue : number){
-
-    if(cartvalue < 5){
-      
+  addCart(){      
       this.cartCount ++
-      this.disableRemove = false;
-
-    }else{
-      this.disableAdd = true;
-    }
-    
   }
 
-  removeCart(cartvalue : number){
-    
-    if(cartvalue > 0){
+  removeCart(){
       this.cartCount --
-      this.disableAdd = false;
-    }else{
-      this.disableRemove = true;
-    }
-    
   }
-
 
 }

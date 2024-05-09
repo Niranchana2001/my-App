@@ -1,4 +1,4 @@
 <p>Cart Count : {{cardCount}}</p>
 
-<button (click)="addCart(cartCount)" [disabled]="disableAdd" >Add Cart</button> &nbsp;&nbsp;
-<button (click)="removeCart(cartCount)" [disabled]="disableRemove">Remove Cart</button>
+<button (click)="addCart()" [disabled]="cardCount === 5" >Add Cart</button> &nbsp;&nbsp;
+<button (click)="removeCart()" [disabled]="cartCount === 0">Remove Cart</button>
