@@ -6,15 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-to-cart.component.scss']
 })
 export class AddToCartComponent {
+  
+  cartCount = 0
 
-  cardCount = 0
-
-  addCart(){
-    this.cardCount ++
+  addCart(){      
+      this.cartCount ++
   }
 
   removeCart(){
-    this.cardCount --
+      this.cartCount --
   }
 
 }
